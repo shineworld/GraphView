@@ -92,4 +92,16 @@ public class GraphViewSeries {
 			g.redrawAll();
 		}
 	}
+	
+	/**
+	 * use passed data
+	 * @param values 
+	 */
+	public void useData(GraphViewData[] values) {
+		this.values = values;
+		for (GraphView g : graphViews) {
+			g.scrollToEnd();
+		}
+	}
+	
 }
